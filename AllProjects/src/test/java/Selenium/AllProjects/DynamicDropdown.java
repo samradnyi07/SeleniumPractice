@@ -18,6 +18,10 @@ public class DynamicDropdown {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']//a[@value='MAA']")).click();
 		
+		driver.findElement(By.cssSelector("a[class = 'ui-state-default ui-state-active']")).click();
+		
+		System.out.println(driver.findElement(By.cssSelector("input[name='ctl00$mainContent$view_date2']")).isEnabled());
+		
 		/*
 		driver.findElement(By.xpath("//a[@value='BLR']")).click();
 		Thread.sleep(1000);
